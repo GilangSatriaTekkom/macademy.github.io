@@ -1,5 +1,4 @@
 let elements = document.getElementsByTagName("header");
-
 if (elements.length > 0) {
     for (let i = 0; i < elements.length; i++) {
         let element = elements[i];
@@ -15,6 +14,26 @@ if (elements.length > 0) {
 } else {
     console.error('No <header> elements found.');
 }
+
+
+
+function h1Animation () {
+    let h1Elements = document.querySelectorAll('h1');
+    h1Elements.forEach((h1, index) => {
+        // Set initial style
+        h1.style.transform = 'translateY(0.5rem)';
+        h1.style.opacity = 0;
+        h1.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+
+        // Apply the animation with increasing delay based on index
+        setTimeout(() => {
+            h1.style.transform = 'translateY(0)';
+            h1.style.opacity = 1;
+        }, index * 200); // Jeda waktu bertambah 200ms untuk setiap elemen
+    });
+}
+
+document.addEventListener('DOMContentLoaded', h1Animation);
 
 
 
@@ -97,11 +116,10 @@ document.getElementById('hamburger').addEventListener('click', function() {
     });
 });
 
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-
-
+document.querySelectorAll('.p-testimonial').forEach((element, index) => {
+    const delay = 10 * index; // Jeda 10ms per elemen
+    element.style.animationDelay = `${delay}ms`;
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     // Fungsi untuk meng-handle perubahan visibility section
@@ -130,4 +148,26 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(section);
     });
 });
+
+
+// Animasi paragrapgh testimonial
+document.querySelectorAll('.p-testimonial').forEach((element, index) => {
+    const delay = 10 * index; // Jeda 10ms per elemen
+    element.style.animationDelay = `${delay}ms`;
+});
+
+function CardbgSwitch () {
+    const courseCard = document.getElementById('course-card');
+    courseCard.style.backgroundimage = image[index];
+    currentIndex = (currentIndex + 1) % keys.length;
+
+}
+
+
+// Window onbeforeunload harus selalu paling bawah
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+//     h1Animation ();
+//   }
+
 

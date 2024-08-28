@@ -20,23 +20,19 @@
     }
 }
 
-/* Animasi untuk h2 di dalam section */
-
-
-/* Animasi untuk elemen dengan class section-title-animation */
-.section-title-animation {
-    opacity: 0;
-    transform: scale(1.5); /* Set initial state to match the animation */
+@keyframes padeUp {
+    0% {
+        transform: translateY(100px); /* Mulai dari ukuran 1.5x lebih besar */
+        opacity: 0;            /* Mulai dengan opacity 0 */
+    }
+    100% {
+        transform: translateY(0);   /* Berakhir dengan ukuran normal */
+        opacity: 1;            /* Berakhir dengan opacity 1 */
+    }
 }
 
 /* Ketika elemen terlihat, jalankan animasi */
-.section-title-animation.show {
-    animation: scaleDown forwards ease-in-out;
-}
-
-/* Ketika elemen terlihat, jalankan animasi */
-section.show h2,
-.section-title-animation.show {
+section.show h2 {
     animation: scaleDown 0.5s forwards ease-in-out;
 }
 
@@ -46,23 +42,21 @@ section h2 {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-section {
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
 section.show {
     opacity: 1;
 }
 
+p {
+    transition: padeUp 0.5s ease;
+}
+
 
 h1 {
-    @apply text-[138px] text-center font-inter
+    @apply text-[138px] text-center font-inter 
 }
 
 li {
     @apply text-base font-inter;
-
 }
 
 h2 {
@@ -118,7 +112,7 @@ header {
     }
 
     p {
-        @apply font-inter text-[10px] text-[#898D94]
+        @apply font-inter text-[10px] text-[#898D94] translate-y-0
     }
 
     h2 {
@@ -259,7 +253,7 @@ header {
 }
   
  
-
+/* _________GRID BACKGROUND METEOR ANIMATION___________ */
 
 .grid-container {
     display: grid;
@@ -425,6 +419,8 @@ header {
     animation-delay: 0s;
 }
 
+/* _________GRID BACKGROUND METEOR ANIMATION END___________ */
+
 
         
 .nav-display {
@@ -482,7 +478,26 @@ header {
 }
 
 .dropdown-content.fade-out {
-    animation: scrollUp 0.3s ease-out forwards; /* Menambahkan animasi fade out */
+    animation: scrollUp 0.3s ease-out forwards;
+}
+
+
+
+.p-testimonial {
+    animation: padeUpTestimonial 0.5s ease-out;
+    /* Default value to avoid errors before JS runs */
+    animation-delay: 0ms;
+}
+
+@keyframes padeUpTestimonial {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
