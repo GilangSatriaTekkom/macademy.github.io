@@ -1,3 +1,23 @@
+let elements = document.getElementsByTagName("header");
+
+if (elements.length > 0) {
+    for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        let opacity = 0;
+        let fadeIn = setInterval(() => {
+            if (opacity >= 1) {
+                clearInterval(fadeIn);
+            }
+            element.style.opacity = opacity;
+            opacity += 0.01;
+        }, 10);
+    }
+} else {
+    console.error('No <header> elements found.');
+}
+
+
+
 window.addEventListener('scroll', function () {
     const navbar = document.getElementById('header');
     if (window.scrollY > 0) {
@@ -76,3 +96,38 @@ document.getElementById('hamburger').addEventListener('click', function() {
         }
     });
 });
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Fungsi untuk meng-handle perubahan visibility section
+    const callback = function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show'); // Tambah kelas 'show' jika elemen terlihat
+
+                // Hentikan observer untuk elemen ini karena animasi hanya perlu terjadi sekali
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    // Atur options untuk observer (threshold 0.1 berarti 10% dari section harus terlihat)
+    const options = {
+        threshold: 0.1
+    };
+
+    // Buat observer
+    const observer = new IntersectionObserver(callback, options);
+
+    // Mengambil semua elemen section dan mengamati mereka
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+

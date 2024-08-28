@@ -8,6 +8,54 @@
 
 @layer base {
 
+/* Animasi scale */
+@keyframes scaleDown {
+    0% {
+        transform: scale(1.05); /* Mulai dari ukuran 1.5x lebih besar */
+        opacity: 0;            /* Mulai dengan opacity 0 */
+    }
+    100% {
+        transform: scale(1);   /* Berakhir dengan ukuran normal */
+        opacity: 1;            /* Berakhir dengan opacity 1 */
+    }
+}
+
+/* Animasi untuk h2 di dalam section */
+
+
+/* Animasi untuk elemen dengan class section-title-animation */
+.section-title-animation {
+    opacity: 0;
+    transform: scale(1.5); /* Set initial state to match the animation */
+}
+
+/* Ketika elemen terlihat, jalankan animasi */
+.section-title-animation.show {
+    animation: scaleDown forwards ease-in-out;
+}
+
+/* Ketika elemen terlihat, jalankan animasi */
+section.show h2,
+.section-title-animation.show {
+    animation: scaleDown 0.5s forwards ease-in-out;
+}
+
+section h2 {
+    opacity: 0;
+    transform: scale(1.5); /* Set initial state to match the animation */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+section {
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+section.show {
+    opacity: 1;
+}
+
+
 h1 {
     @apply text-[138px] text-center font-inter
 }
@@ -136,7 +184,7 @@ header {
 }
 
 .btn {
-    @apply py-3 px-5 text-[16px] border rounded-full flex flex-row items-center justify-center border-blackTheme space-x-2
+    @apply py-3 px-5 text-[16px] border rounded-full flex flex-row items-center justify-center border-blackTheme space-x-2 
 }
 
 .btn-circle {

@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/min.main.css">
+    <link rel="stylesheet" href="./src/assets/css/min.main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <script defer src="./src/assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app="">
     <div class="mobile:hidden absolute grid-container -z-1">
         <div>
             <div class="meteor"></div>
@@ -22,14 +22,15 @@
             <div class="meteor"></div>
             <div class="meteor-up"></div>
         </div>
-
     </div>
 
-    <div class="absolute -z-1 w-screen h-screen bg-cover desktop:hidden tablet:hidden" style="background-image: url('./assets/img/background-image-mobile.png');"></div>
+    <div class="absolute -z-1 w-screen h-screen bg-cover desktop:hidden tablet:hidden" style="background-image: url('./src/assets/img/background-image-mobile.png');"></div>
 
     <div class="z-10">
-        <img class="mobile:hidden absolute top-[90px] mx-auto" src="./assets/img/light_neon.png" alt="">
-        <div class="hidden absolute desktop:flex tablet:flex w-full justify-center h-17">
+        <img class="mobile:hidden absolute top-[90px] mx-auto" src="./src/assets/img/light_neon.png" alt="">
+            
+        <header id="header" class="fixed w-full mobile:bg-white mobile:z-50">
+            <div class="hidden absolute desktop:flex tablet:flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 justify-center h-17">
                 <ul class="ul-header">
                     <a href="" class="li list-disc">About us</a>
                     <a href="" class="li list-disc">Student Testimoni</a>
@@ -37,17 +38,14 @@
                     <a href="" class="li list-disc">Contact</a>
                 </ul>
             </div>
-        <header id="header" class="fixed w-full mobile:bg-white mobile:z-50">
             <div id="nav-mobile" class="nav-display container">
                 <a href="" class="main-logo">
-                    <img src="./assets/svg/macademy_logo.svg" alt="">
+                    <img src="./src/assets/svg/macademy_logo.svg" alt="">
                 </a>
                 <div class="hidden desktop:nav-gap tablet:nav-gap">
-                    <a href="https://www.macademy.id" class="btn border-0 tablet:p-2">Be a mentor <img class="icon"
-                            src="./assets/svg/north-east-arrow.svg" alt=""></a>
-                    <a   href="" class="btn bg-white">
-                        Be a Student
-                        <img class="icon" src="./assets/svg/north-east-arrow.svg" alt="">
+                    <a href="https://www.macademy.id" class="btn border-0 tablet:p-2">Be a mentor <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt=""></a>
+                    <a href="" class="btn bg-white"> Be a Student
+                        <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </a>
                 </div>
 
@@ -90,25 +88,21 @@
         <div class="container flex justify-center">
             <div class="container font-inter pt-17">
                 <div class="flex flex-col items-center desktop:pt-24 tablet:pt-12 mobile:pt-24 pb-10">                    
-                    <h4 class="bg-blackTheme text-white btn">Smart With Our Course</h4>                    
+                    <h4 class="bg-blackTheme text-white btn"><label for="">Smart With Our Course</label></h4>                    
                     <h1>Get smarter with expert ment<span class="o-word "></span>rs</h1>
                     <h4 class="text-center text-paragraph leading-relaxed py-8">
                         Explore our wide range of premium products, crafted
                         to meet the highest standards.
                         From stylish shoes to trendy accessories, find everything you need to elevate your style.
                     </h4>
-
-                    <a href="" class="bg-baseColor border-0 text-blackThemeTheme btn">Looking for Course <span
-                            class="icon inline-block items-center"><img src="./assets/svg/north-east-arrow.svg"
-                                alt=""></span></a>
+                    <a href="" class="bg-baseColor border-0 text-blackThemeTheme btn hover:scale-110 ease-in duration-300">Looking for Course <span class="icon inline-block items-center"><img src="./src/assets/svg/north-east-arrow.svg" alt=""></span></a>
                 </div>
             </div>
         </div>
     </div>
 
     <section class="container">
-        <div
-            class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between desktop:space-x-6 tablet:space-x-6 mobile:space-y-6">
+        <div class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between desktop:space-x-6 tablet:space-x-6 mobile:space-y-6">
             <div class="card desktop:w-112 flex-none tablet:w-64 card-leading">
                 <div class="space-y-2 w-full">
                     <p class="text-sm text-bl">
@@ -117,16 +111,16 @@
 
                     <div class="flex flex-row justify-between">
                         <div class="flex flex-row space-x-1 items-center">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
                             <span class="text-paragraph">( 4.8k )</span>
                         </div>
 
                         <div class="flex flex-row space-x-1 items-center">
-                            <img class="download" src="./assets/svg/download.svg" alt="">
+                            <img class="download" src="./src/assets/svg/download.svg" alt="">
                             <span class="text-paragraph">( 12k )</span>
                         </div>
                     </div>
@@ -137,8 +131,8 @@
                     <p>Explore our wide range of premium products</p>
                 </div>
 
-                <a href="" class="btn border-paragraph rounded-full">Buy Course
-                    <img class="icon inline-block" src="./assets/svg/north-east-arrow.svg" alt="">
+                <a href="" class="btn border-paragraph rounded-full hover:scale-110 ease-in duration-300">Buy Course
+                    <img class="icon inline-block" src="./src/assets/svg/north-east-arrow.svg" alt="">
                 </a>
             </div>
 
@@ -149,7 +143,7 @@
                 </div>
 
                 <div1 class="flex flex-row mt-auto h-full desktop:space-x-6 tablet:space-x-2 mobile:space-x-6 items-center align-bottom">
-                    <img class="img-group tablet:h-7" src="./assets/img/group-man.png" alt="">
+                    <img class="img-group tablet:h-7" src="./src/assets/img/group-man.png" alt="">
 
                     <div>
                         <h3 class="tablet:text-[16px]">2000+</h3>
@@ -164,7 +158,6 @@
                     <h3 class="leading-tight">Many Courses at Macademy</h3>
                     <p>Explore our range of premium Courses with expert mentors.</p>
                 </div>
-
 
                 <div class="flex flex-row text-center w-full justify-between">
                     <div class="flex flex-col">
@@ -191,49 +184,49 @@
     <div class="relative flex flex-col h-auto w-auto overflow-x-hidden items-center justify-center mx-auto">
         <div class="slider-1">
             <div class="slider-content">
-                <img src="./assets/svg/logo-bankin.svg" alt="">
+                <img src="./src/assets/svg/logo-bankin.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-google.svg" alt="">
+                <img src="./src/assets/svg/logo-google.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-slack.svg" alt="">
+                <img src="./src/assets/svg/logo-slack.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-adobe.svg" alt="">
+                <img src="./src/assets/svg/logo-adobe.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-microsoft.svg" alt="">
+                <img src="./src/assets/svg/logo-microsoft.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-spotify.svg" alt="">
+                <img src="./src/assets/svg/logo-spotify.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-gusto.svg" alt="">
+                <img src="./src/assets/svg/logo-gusto.svg" alt="">
             </div>
         </div>
 
         <div class="slider-2">
             <div class="slider-content">
-                <img src="./assets/svg/logo-bankin.svg" alt="">
+                <img src="./src/assets/svg/logo-bankin.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-google.svg" alt="">
+                <img src="./src/assets/svg/logo-google.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-slack.svg" alt="">
+                <img src="./src/assets/svg/logo-slack.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-adobe.svg" alt="">
+                <img src="./src/assets/svg/logo-adobe.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-microsoft.svg" alt="">
+                <img src="./src/assets/svg/logo-microsoft.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-spotify.svg" alt="">
+                <img src="./src/assets/svg/logo-spotify.svg" alt="">
             </div>
             <div class="slider-content">
-                <img src="./assets/svg/logo-gusto.svg" alt="">
+                <img src="./src/assets/svg/logo-gusto.svg" alt="">
             </div>
         </div>
     </div>
@@ -254,7 +247,6 @@
             </div>
         </div>
 
-
         <div
             class="flex desktop:flex-row tablet:flex-row mobile:flex-col desktop:space-x-6 tablet:space-x-6 mobile:space-y-6">
             <div class="desktop:w-1/3 tablet:w-1/3 mobile:w-auto">
@@ -262,70 +254,55 @@
                     <h3>UI/UX Designer</h3>
                     <div class="btn-circle">
                         <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3"
-                            src="./assets/svg/north-east-arrow.svg" alt="">
+                            src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </div>
-
                 </div>
                 <div class="card-portrait bg-book relative flex whitespace-nowrap overflow-x-auto">
                     <div
                         class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
-                        <a href="" class="btn border-2 border-white">3D Animation</a>
-                        <a href="" class="btn border-2 border-white">3d Ilustration</a>
-                        <a href="" class="btn border-2 border-white">Front End Development</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">3D Animation</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">3d Ilustration</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">Front End Development</a>
                     </div>
                 </div>
-                <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards.
-                </p>
-
+                <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards. </p>
             </div>
 
             <div class="desktop:w-1/3 tablet:w-1/3 mobile:w-auto">
                 <div class="p-3 flex flex-row justify-between border-t-2">
                     <h3>3D Designer</h3>
                     <div class="btn-circle">
-                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3"
-                            src="./assets/svg/north-east-arrow.svg" alt="">
+                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </div>
-
                 </div>
                 <div class="card-portrait bg-img1 relative flex whitespace-nowrap overflow-x-auto">
                     <div
                         class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
-                        <a href="" class="btn border-2 border-white">3D Animation</a>
-                        <a href="" class="btn border-2 border-white">3d Ilustration</a>
-                        <a href="" class="btn border-2 border-white">Front End Development</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">3D Animation</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">3d Ilustration</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">Front End Development</a>
                     </div>
-
                 </div>
-                <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards.
-                </p>
-
+                <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards.</p>
             </div>
 
             <div class="desktop:w-1/3 tablet:w-1/3 mobile:w-auto">
                 <div class="p-3 flex flex-row justify-between border-t-2">
                     <h3 class="mobile:text-2xl">Marketing Specialist</h3>
                     <div class="btn-circle">
-                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3"
-                            src="./assets/svg/north-east-arrow.svg" alt="">
+                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </div>
-
                 </div>
+
                 <div class="card-portrait bg-img2 relative flex whitespace-nowrap overflow-x-auto">
-                    <div
-                        class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
-                        <a href="" class="btn border-2 border-white">3D Animation</a>
-                        <a href="" class="btn border-2 border-white">3d Ilustration</a>
-                        <a href="" class="btn border-2 border-white">Front End Development</a>
+                    <div class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">3D Animation</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">3d Ilustration</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-300">Front End Development</a>
                     </div>
-
                 </div>
-                <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards.
-                </p>
-
+                <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards.</p>
             </div>
-
-
         </div>
     </section>
 
@@ -344,10 +321,8 @@
                             From stylish shoes to trendy accessories.</p>
                     </div>
 
-
-                    <a href="" class="btn bg-baseColor border-0 text-blackTheme flex flex-row items-center">
-                        View All Course
-                        <img class="icon" src="./assets/svg/north-east-arrow.svg" alt="">
+                    <a href="" class="btn bg-baseColor border-0 text-blackTheme flex flex-row items-center hover:scale-110 ease-in duration-300"> View All Course
+                        <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </a>
                 </div>
 
@@ -355,9 +330,9 @@
                     <div class="flex flex-row space-x-6">
                         <div class="dropdown border-b-2 w-48 flex flex-row justify-between cursor-pointer relative">
                             All Categories
-                            <img class="icon transition-transform duration-300" src="./assets/svg/north-east-arrow.svg" alt="">
+                            <img class="icon transition-transform duration-300" src="./src/assets/svg/north-east-arrow.svg" alt="">
                             <div class="dropdown-content absolute overflow-y-auto h-32 top-full left-0 w-full bg-white border border-gray-300 mt-6 rounded-lg shadow-md z-10 hidden">
-                                <ul class="text-gray-700">
+                                <ul class="text-gray-700 flex flex-col">
                                     <a href="" class="p-2 hover:bg-gray-100">Category 1</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 2</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 3</a>
@@ -367,9 +342,9 @@
                         
                         <div class="dropdown border-b-2 w-48 flex flex-row justify-between cursor-pointer relative">
                             Popular Course
-                            <img class="icon transition-transform duration-300" src="./assets/svg/north-east-arrow.svg" alt="">
+                            <img class="icon transition-transform duration-300" src="./src/assets/svg/north-east-arrow.svg" alt="">
                             <div class="dropdown-content overflow-y-auto h-32 absolute top-full left-0 w-full bg-white border border-gray-300 mt-6 rounded-lg shadow-md z-10 hidden">
-                                <ul class="text-gray-700">
+                                <ul class="text-gray-700 flex flex-col">
                                     <a href="" class="p-2 hover:bg-gray-100">Category 1</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 2</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 3</a>
@@ -384,13 +359,9 @@
                         </div>
                     </div>
                     
-                    
-
                     <input placeholder="Search Course......" name="search" class="search-fill relative">
-                        <!-- <img class="h-4 w-4" src="./assets/svg/magnifying-glass.svg" alt=""> -->
+                        <!-- <img class="h-4 w-4" src="./src/assets/svg/magnifying-glass.svg" alt=""> -->
                     </input>
-
-
                 </div>
 
                 <div class="mt-10">
@@ -400,22 +371,21 @@
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/Star.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/Star.svg" alt="">
                                         <p>Star (4.8k)</p>
                                     </div>
 
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/user.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/user.svg" alt="">
                                         <p>(12k)</p>
                                     </div>
-
                                 </div>
                                 <h3>Mastering Interaction Design: From Principles to Practice</h3>
                                 <p>Explore our wide range of premium products, crafted to meet the highest
                                     standards.
                                     From stylish shoe......</p>
                                 <div class="flex flex-row space-x-2">
-                                    <img class="profile-pict" src="./assets/img/girl1.png" alt="">
+                                    <img class="profile-pict" src="./src/assets/img/girl1.png" alt="">
                                     <div class="flex flex-col">
                                         <h4>Lisa K.</h4>
                                         <p>UI/UX Designer</p>
@@ -423,30 +393,27 @@
                                 </div>
                                 <h4 class="font-bold">$80,00</h4>
                             </div>
-
                         </div>
-
                         <div class="flex flex-col space-y-6">
                             <div class="card-square bg-cover bg-center bg-imgSquare3"></div>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/Star.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/Star.svg" alt="">
                                         <p class="text-[14px]">Star (4.8k)</p>
                                     </div>
 
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/user.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/user.svg" alt="">
                                         <p>(12k)</p>
                                     </div>
-
                                 </div>
                                 <h3>Mastering 3D Designer: From Beginner to Expert</h3>
                                 <p>Explore our wide range of premium products, crafted to meet the highest
                                     standards.
                                     From stylish shoe......</p>
                                 <div class="flex flex-row space-x-2">
-                                    <img class="profile-pict" src="./assets/img/man_1.png" alt="">
+                                    <img class="profile-pict" src="./src/assets/img/man_1.png" alt="">
                                     <div class="flex flex-col">
                                         <h4>Cameron Williamson</h4>
                                         <p>3D Designer</p>
@@ -454,7 +421,6 @@
                                 </div>
                                 <h4 class="font-bold">$80,00</h4>
                             </div>
-
                         </div>
 
                         <div class="flex flex-col space-y-6">
@@ -462,22 +428,22 @@
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/Star.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/Star.svg" alt="">
                                         <p class="text-[14px]">Star (4.8k)</p>
                                     </div>
 
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/user.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/user.svg" alt="">
                                         <p>(12k)</p>
                                     </div>
-
                                 </div>
+
                                 <h3>Mastering UI/UX Designer: From Beginenr to Expert</h3>
                                 <p>Explore our wide range of premium products, crafted to meet the highest
                                     standards.
                                     From stylish shoe......</p>
                                 <div class="flex flex-row space-x-2">
-                                    <img class="profile-pict" src="./assets/img/man_2.png" alt="">
+                                    <img class="profile-pict" src="./src/assets/img/man_2.png" alt="">
                                     <div class="flex flex-col">
                                         <h4>Arlene McCoy</h4>
                                         <p>Nursing Assistant</p>
@@ -485,7 +451,6 @@
                                 </div>
                                 <h4 class="font-bold">$80,00</h4>
                             </div>
-
                         </div>
 
                         <div class="flex flex-col space-y-6">
@@ -493,22 +458,22 @@
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/Star.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/Star.svg" alt="">
                                         <p class="text-[14px]">Star (4.8k)</p>
                                     </div>
 
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/user.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/user.svg" alt="">
                                         <p>(12k)</p>
                                     </div>
-
                                 </div>
+
                                 <h3>Mastering 3D Designer: Build a Portfolio</h3>
                                 <p>Explore our wide range of premium products, crafted to meet the highest
                                     standards.
                                     From stylish shoe......</p>
                                 <div class="flex flex-row space-x-2">
-                                    <img class="profile-pict" src="./assets/img/man_1.png" alt="">
+                                    <img class="profile-pict" src="./src/assets/img/man_1.png" alt="">
                                     <div class="flex flex-col">
                                         <h4>Cameron Williamson</h4>
                                         <p>3D Designer</p>
@@ -516,30 +481,28 @@
                                 </div>
                                 <h4 class="font-bold">$80,00</h4>
                             </div>
-
                         </div>
-
                         <div class="flex flex-col space-y-6">
                             <div class="card-square bg-imgSquare4 bg-cover bg-center"></div>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/Star.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/Star.svg" alt="">
                                         <p class="text-[14px]">Star (4.8k)</p>
                                     </div>
 
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/user.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/user.svg" alt="">
                                         <p>(12k)</p>
                                     </div>
-
                                 </div>
+
                                 <h3>Mastering Prototype: From Beginenr to Expert</h3>
                                 <p>Explore our wide range of premium products, crafted to meet the highest
                                     standards.
                                     From stylish shoe......</p>
                                 <div class="flex flex-row space-x-2">
-                                    <img class="profile-pict" src="./assets/img/man_2.png" alt="">
+                                    <img class="profile-pict" src="./src/assets/img/man_2.png" alt="">
                                     <div class="flex flex-col">
                                         <h4>Arlene McCoy</h4>
                                         <p>Nursing Assistant</p>
@@ -547,7 +510,6 @@
                                 </div>
                                 <h4 class="font-bold">$80,00</h4>
                             </div>
-
                         </div>
 
                         <div class="flex flex-col space-y-6">
@@ -555,22 +517,22 @@
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/Star.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/Star.svg" alt="">
                                         <p class="text-[14px]">Star (4.8k)</p>
                                     </div>
 
                                     <div class="flex flex-row space-x-2 items-center">
-                                        <img class="icon" src="./assets/svg/user.svg" alt="">
+                                        <img class="icon" src="./src/assets/svg/user.svg" alt="">
                                         <p>(12k)</p>
                                     </div>
-
                                 </div>
+
                                 <h3>Mastering Of Marketing: From Principles to Practice</h3>
                                 <p>Explore our wide range of premium products, crafted to meet the highest
                                     standards.
                                     From stylish shoe......</p>
                                 <div class="flex flex-row space-x-2">
-                                    <img class="profile-pict" src="./assets/img/girl1.png" alt="">
+                                    <img class="profile-pict" src="./src/assets/img/girl1.png" alt="">
                                     <div class="flex flex-col">
                                         <h4>Lisa K.</h4>
                                         <p>UI/UX Designer</p>
@@ -578,16 +540,11 @@
                                 </div>
                                 <h4 class="font-bold">$80,00</h4>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         </div>
-
     </Section>
 
     <!-- ----------OUR COURSE END------------- -->
@@ -607,23 +564,21 @@
 
         <div class="desktop:mt-10 tablet:mt-10 mobile:mt-6">
             <div class="desktop:grid tablet:grid grid-cols-3 grid-rows-2 gap-6 mobile:flex">
-
                 <div class="card-testimonial bg-cardTestimonial">
-                    <div
-                        class=" flex flex-col desktop:justify-between tablet:justify-between mobile:space-y-4 desktop:w-full desktop:h-full tablet:w-full tablet:h-full mobile:w-full mobile:h-auto">
+                    <div class=" flex flex-col desktop:justify-between tablet:justify-between mobile:space-y-4 desktop:w-full desktop:h-full tablet:w-full tablet:h-full mobile:w-full mobile:h-auto">
                         <div class="flex flex-row space-x-1">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
-                            <img class="star" src="./assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="star" src="./src/assets/svg/Star.svg" alt="">
                         </div>
                         <p>
                             "The courses at Macademy have been very helpful in developing my design skills. The
                             mentors are very experienced and the course materials are very well structured. I highly
                             recommend Macademy to anyone who wants to improve their design skills." </p>
                         <div class="flex flex-row space-x-2">
-                            <img class="profile-pict" src="./assets/img/man_3.png" alt="">
+                            <img class="profile-pict" src="./src/assets/img/man_3.png" alt="">
                             <div class="flex flex-col">
                                 <h4>Flores, Juanita</h4>
                                 <p>President of Sales</p>
@@ -635,18 +590,18 @@
                 <div class="hidden desktop:card-testimonial tablet:card-testimonial ">
                     <div class=" flex flex-col justify-between w-full h-full">
                         <div class="flex flex-row space-x-1">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
                         </div>
                         <p>
                             Taking the Marketing course at Macademy has given me a lot of new insights. The
                             interactive teaching method and support from the mentors really motivate me to keep
                             learning. Now, I feel more confident in my work. </p>
                         <div class="flex flex-row space-x-2">
-                            <img class="profile-pict" src="./assets/img/man_4.png" alt="">
+                            <img class="profile-pict" src="./src/assets/img/man_4.png" alt="">
                             <div class="flex flex-col">
                                 <h4>Miles, Esther</h4>
                                 <p>Marketing Specialist</p>
@@ -658,18 +613,18 @@
                 <div class="hidden desktop:card-testimonial tablet:card-testimonial bg-cardTestimonial">
                     <div class=" flex flex-col justify-between w-full h-full">
                         <div class="flex flex-row space-x-1">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
                         </div>
                         <p>
                             Macademy provides an amazing learning experience. The 3D Design course I took was very
                             in-depth and practical. I am very happy with the results I got and am now able to
                             produce more professional 3D work.</p>
                         <div class="flex flex-row space-x-2">
-                            <img class="profile-pict" src="./assets/img/man_5.png" alt="">
+                            <img class="profile-pict" src="./src/assets/img/man_5.png" alt="">
                             <div class="flex flex-col">
                                 <h4>Cooper, Kristin</h4>
                                 <p>3D Designer</p>
@@ -681,11 +636,11 @@
                 <div class="hidden desktop:card-testimonial tablet:card-testimonial ">
                     <div class=" flex flex-col justify-between w-full h-full">
                         <div class="flex flex-row space-x-1">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
                         </div>
                         <p>
                             I am very satisfied with the Product Management course at Macademy. The comprehensive
@@ -693,7 +648,7 @@
                             responsibilities of a Product Manager. I feel more prepared to face the challenges in my
                             current job. </p>
                         <div class="flex flex-row space-x-2">
-                            <img class="profile-pict" src="./assets/img/man_6.png" alt="">
+                            <img class="profile-pict" src="./src/assets/img/man_6.png" alt="">
                             <div class="flex flex-col">
                                 <h4>Nguyen, Shane</h4>
                                 <p>Product Designer</p>
@@ -705,11 +660,11 @@
                 <div class="hidden desktop:card-testimonial tablet:card-testimonial bg-cardTestimonial">
                     <div class=" flex flex-col justify-between w-full h-full">
                         <div class="flex flex-row space-x-1">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
                         </div>
                         <p>
                             "As a fashion blogger, I always look for brands that offer quality and style. MTshirt
@@ -717,7 +672,7 @@
                             always features thoughtful details and comfortable materials. I recommend them to all my
                             followers!" </p>
                         <div class="flex flex-row space-x-2">
-                            <img class="profile-pict" src="./assets/img/man_7.png" alt="">
+                            <img class="profile-pict" src="./src/assets/img/man_7.png" alt="">
                             <div class="flex flex-col">
                                 <h4>Miles, Esther</h4>
                                 <p>Nursing Assistant</p>
@@ -729,11 +684,11 @@
                 <div class="hidden desktop:card-testimonial tablet:card-testimonial ">
                     <div class=" flex flex-col justify-between w-full h-full">
                         <div class="flex flex-row space-x-1">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
-                            <img class="w-5 h-5" src="./assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
+                            <img class="w-5 h-5" src="./src/assets/svg/Star.svg" alt="">
                         </div>
                         <p>
                             Macademy has completely changed the way I view and approach design. The UI/UX Design
@@ -741,7 +696,7 @@
                             industry. Thank you Macademy!
                         </p>
                         <div class="flex flex-row space-x-2">
-                            <img class="profile-pict" src="./assets/img/man_1.png" alt="">
+                            <img class="profile-pict" src="./src/assets/img/man_1.png" alt="">
                             <div class="flex flex-col">
                                 <h4>Cameron Williamson</h4>
                                 <p>Freelancer Designer</p>
@@ -749,11 +704,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
     <!-- ----------TESTIMONIAL END------------- -->
@@ -762,64 +714,61 @@
         <div class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between mobile:space-y-10">
             <div class="flex flex-col desktop:space-y-10 tablet:space-y-10 mobile:space-y-8">
                 <div class="logo">
-                    <img src="./assets/svg/macademy_logo.svg" alt="">
+                    <img src="./src/assets/svg/macademy_logo.svg" alt="">
                 </div>
                 <div class="flex flex-row space-x-2">
-                    <a href="" class="btn bg-baseColor border-0 text-blackThemeTheme ">
+                    <a href="" class="btn bg-baseColor border-0 text-blackThemeTheme hover:scale-105 ease-in duration-300">
                         View All Source
-                        <img class="icon" src="./assets/svg/north-east-arrow.svg" alt="">
+                        <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </a>
 
-                    <a href="" class="btn">
+                    <a href="" class="btn hover:scale-105 ease-in duration-300">
                         Buy Source
-                        <img class="icon" src="./assets/svg/north-east-arrow.svg" alt="">
+                        <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </a>
                 </div>
 
                 <div class="flex flex-row space-x-4">
                     <div class="bg-paragraph rounded-full h-6 w-6 flex justify-center items-center">
-                        <img class="icon-footer" src="./assets/svg/icon_facebook.svg" alt="">
+                        <img class="icon-footer" src="./src/assets/svg/icon_facebook.svg" alt="">
                     </div>
                     <div class="bg-paragraph rounded-full h-6 w-6 flex justify-center items-center">
-                        <img class="icon-footer" src="./assets/svg/icons-twitter.svg" alt="">
+                        <img class="icon-footer" src="./src/assets/svg/icons-twitter.svg" alt="">
                     </div>
                     <div class="bg-paragraph rounded-full h-6 w-6 flex justify-center items-center">
-                        <img class="icon-footer" src="./assets/svg/instagram_icon.svg" alt="">
+                        <img class="icon-footer" src="./src/assets/svg/instagram_icon.svg" alt="">
                     </div>
                     <div class="bg-paragraph rounded-full h-6 w-6 flex justify-center items-center">
-                        <img class="icon-footer" src="./assets/svg/icon_linkedin.svg" alt="">
+                        <img class="icon-footer" src="./src/assets/svg/icon_linkedin.svg" alt="">
                     </div>
                 </div>
-
             </div>
             <div
                 class="flex desktop:flex-row tablet:flex-row mobile:flex-col desktop:space-x-32 tablet:space-x-32 mobile:space-y-6">
                 <div class="flex-col">
                     <h4>Company</h4>
-                    <div class="mt-6 space-y-3">
-                        <p>About Us</p>
-                        <p>Student Testimonial</p>
-                        <p>Course</p>
-                        <p>Contact</p>
+                    <div class="flex flex-col mt-6 space-y-3">
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">About Us</a>
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">Student Testimonial</a>
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">Course</a>
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">Contact</a>
                     </div>
                 </div>
 
                 <div class="flex-col">
                     <h4>User</h4>
-                    <div class="mt-6 space-y-3">
-
-                        <p>Be a Mentor</p>
-                        <p>Be a Student</p>
+                    <div class="flex flex-col mt-6 space-y-3">
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">Be a Mentor</a>
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">Be a Student</a>
                     </div>
                 </div>
 
                 <div class="flex-col">
                     <h4>Support</h4>
-                    <div class="mt-6 space-y-3">
-
-                        <p>Help Center</p>
-                        <p>FAQ</p>
-                        <p>Forums</p>
+                    <div class="flex flex-col mt-6 space-y-3">
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">Help Center</a>
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">FAQ</a>
+                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-100">Forums</a>
                     </div>
                 </div>
             </div>
@@ -827,8 +776,7 @@
 
         <div class="border-t-2 my-6"></div>
 
-        <div
-            class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between mobile:space-y-6 mobile:items-center">
+        <div class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between mobile:space-y-6 mobile:items-center">
             <h4 class="font-helvetica mobile:text-[16px]">© 2024 macademy. All rights reserved.</h4>
             <div class="flex flex-row space-x-6 ">
                 <h4 class="mobile:text-[16px]">Customer Services</h4>
@@ -837,12 +785,9 @@
             </div>
         </div>
     </footer>
-
-
-
 </body>
 
-<script src="./assets/js/main.js"></script>
+
 <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
 <script src="https://kit.fontawesome.com/89bfe68428.js" crossorigin="anonymous"></script>
 
