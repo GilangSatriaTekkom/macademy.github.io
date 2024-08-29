@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./src/assets/css/min.main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@700&display=swap"
+        rel="stylesheet">
     <script defer src="./src/assets/js/main.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
@@ -24,13 +26,15 @@
         </div>
     </div>
 
-    <div class="absolute -z-1 w-screen h-screen bg-cover desktop:hidden tablet:hidden" style="background-image: url('./src/assets/img/background-image-mobile.png');"></div>
+    <div class="absolute -z-1 w-screen h-screen bg-cover desktop:hidden tablet:hidden"
+        style="background-image: url('./src/assets/img/background-image-mobile.png');"></div>
 
     <div class="z-10">
         <img class="mobile:hidden absolute top-[90px] mx-auto" src="./src/assets/img/light_neon.png" alt="">
-            
+
         <header id="header" class="fixed w-full mobile:bg-white mobile:z-50">
-            <div class="hidden absolute desktop:flex tablet:flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 justify-center h-17">
+            <div
+                class="hidden absolute desktop:flex tablet:flex top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 justify-center h-17">
                 <ul class="ul-header">
                     <a href="" class="li list-disc">About us</a>
                     <a href="" class="li list-disc">Student Testimoni</a>
@@ -43,7 +47,8 @@
                     <img src="./src/assets/svg/macademy_logo.svg" alt="">
                 </a>
                 <div class="hidden desktop:nav-gap tablet:nav-gap">
-                    <a href="https://www.macademy.id" class="btn border-0 tablet:p-2">Be a mentor <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt=""></a>
+                    <a href="https://www.macademy.id" class="btn border-0 tablet:p-2">Be a mentor <img class="icon"
+                            src="./src/assets/svg/north-east-arrow.svg" alt=""></a>
                     <a href="" class="btn bg-white"> Be a Student
                         <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </a>
@@ -62,34 +67,34 @@
                 </div>
             </div>
         </header>
-        
+
         <div id="navbar-hamburger"
-                class="w-full fixed -top-[180px] h-[180px] transition-all duration-500 ease-in-out z-40">
-                <ul class="flex flex-col font-medium mt-0 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                    <li>
-                        <a href="#" id="home"
-                            class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" id="services"
-                            class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" id="pricing"
-                            class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#" id="contact"
-                            class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            class="w-full fixed -top-[180px] h-[180px] transition-all duration-500 ease-in-out z-40">
+            <ul class="flex flex-col font-medium mt-0 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                <li>
+                    <a href="#" id="home"
+                        class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="services"
+                        class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Services</a>
+                </li>
+                <li>
+                    <a href="#" id="pricing"
+                        class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Pricing</a>
+                </li>
+                <li>
+                    <a href="#" id="contact"
+                        class="block py-2 px-3 text-gray-900 bg-white rounded hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Contact</a>
+                </li>
+            </ul>
+        </div>
 
         <div class="container flex justify-center">
             <div class="container font-inter pt-17">
-                <div class="flex flex-col items-center desktop:pt-24 tablet:pt-12 mobile:pt-24 pb-10">                    
-                    <h4 class="bg-blackTheme text-white btn"><label for="">Smart With Our Course</label></h4>                    
-                    
+                <div class="flex flex-col items-center desktop:pt-24 tablet:pt-12 mobile:pt-24 pb-10">
+                    <h4 class="bg-blackTheme text-white btn"><label for="">Smart With Our Course</label></h4>
+
                     <h1>Get smarter with</h1>
                     <h1>expert ment<span class="o-word"></span>rs</h1>
 
@@ -98,14 +103,18 @@
                         to meet the highest standards.
                         From stylish shoes to trendy accessories, find everything you need to elevate your style.
                     </h4>
-                    <a href="" class="bg-baseColor border-0 text-blackThemeTheme btn hover:scale-110 ease-in duration-200">Looking for Course <span class="icon inline-block items-center"><img src="./src/assets/svg/north-east-arrow.svg" alt=""></span></a>
+                    <a href=""
+                        class="bg-baseColor border-0 text-blackThemeTheme btn hover:scale-110 ease-in duration-200">Looking
+                        for Course <span class="icon inline-block items-center"><img
+                                src="./src/assets/svg/north-east-arrow.svg" alt=""></span></a>
                 </div>
             </div>
         </div>
     </div>
 
     <section class="container">
-        <div class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between desktop:space-x-6 tablet:space-x-6 mobile:space-y-6">
+        <div
+            class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between desktop:space-x-6 tablet:space-x-6 mobile:space-y-6">
             <div class="card desktop:w-112 flex-none tablet:w-64 card-leading">
                 <div class="space-y-2 w-full">
                     <p class="text-sm text-bl">
@@ -145,7 +154,8 @@
                     <p>Much more student in our Platform from in This World</p>
                 </div>
 
-                <div1 class="flex flex-row mt-auto h-full desktop:space-x-6 tablet:space-x-2 mobile:space-x-6 items-center align-bottom">
+                <div1
+                    class="flex flex-row mt-auto h-full desktop:space-x-6 tablet:space-x-2 mobile:space-x-6 items-center align-bottom">
                     <img class="img-group tablet:h-7" src="./src/assets/img/group-man.png" alt="">
 
                     <div>
@@ -253,21 +263,26 @@
         <div
             class="flex desktop:flex-row tablet:flex-row mobile:flex-col desktop:space-x-6 tablet:space-x-6 mobile:space-y-6">
             <div class="desktop:w-1/3 tablet:w-1/3 mobile:w-auto">
-                <div class="p-3 flex flex-row justify-between border-t-2">
+                <div class="p-3 flex flex-row justify-between border-t-2 ">
                     <h3>UI/UX Designer</h3>
                     <div class="btn-circle">
                         <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3"
                             src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </div>
                 </div>
-                <div class="card-portrait bg-book relative flex whitespace-nowrap overflow-x-auto">
-                    <div
-                        class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3D Animation</a>
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3d Ilustration</a>
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">Front End Development</a>
+                <div id="bgCard1" class="relative bg-book card-portrait whitespace-nowrap">
+                    <a href=""><div class="card-portrait"></div></a>
+                    <div class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14
+                        text-white space-x-2">
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3D
+                            Animation</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3d
+                            Ilustration</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">Front End
+                            Development</a>
                     </div>
                 </div>
+
                 <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards. </p>
             </div>
 
@@ -275,15 +290,19 @@
                 <div class="p-3 flex flex-row justify-between border-t-2">
                     <h3>3D Designer</h3>
                     <div class="btn-circle">
-                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3" src="./src/assets/svg/north-east-arrow.svg" alt="">
+                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3"
+                            src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </div>
                 </div>
-                <div class="card-portrait bg-img1 relative flex whitespace-nowrap overflow-x-auto">
-                    <div
-                        class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3D Animation</a>
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3d Ilustration</a>
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">Front End Development</a>
+                <div id="bgCard2" class="card-portrait bg-img1 relative whitespace-nowrap">
+                    <a href=""><div class="card-portrait"></div></a>
+                    <div class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3D
+                            Animation</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3d
+                            Ilustration</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">Front End
+                            Development</a>
                     </div>
                 </div>
                 <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards.</p>
@@ -293,15 +312,20 @@
                 <div class="p-3 flex flex-row justify-between border-t-2">
                     <h3 class="mobile:text-2xl">Marketing Specialist</h3>
                     <div class="btn-circle">
-                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3" src="./src/assets/svg/north-east-arrow.svg" alt="">
+                        <img class="desktop:w-6 desktop:h-6 tablet:w-3 tablet:h-3 mobile:w-3 mobile:h-3"
+                            src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </div>
                 </div>
 
-                <div class="card-portrait bg-img2 relative flex whitespace-nowrap overflow-x-auto">
+                <div id="bgCard3" class="card-portrait background bg-img2 relative whitespace-nowrap">
+                    <a href=""><div class="card-portrait"></div></a>
                     <div class="absolute flex justify-center desktop:bottom-14 tablet:bottom-6 mobile:bottom-14 text-white space-x-2">
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3D Animation</a>
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3d Ilustration</a>
-                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">Front End Development</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3D
+                            Animation</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">3d
+                            Ilustration</a>
+                        <a href="" class="btn border-2 border-white hover:scale-105 ease-in duration-200">Front End
+                            Development</a>
                     </div>
                 </div>
                 <p class="mt-4">Explore our wide range of premium products, crafted to meet the highest standards.</p>
@@ -315,16 +339,20 @@
     <Section class="container space-y-10 desktop:py-28 tablet:py-12 mobile:py-28">
         <div class="sub-title items-start">
             <div class="desktop:space-y-6 tablet:space-y-6 mobile:space-y-10 w-full">
-                <div class="flex desktop:flex-row tablet:flex-row mobile:flex-col desktop:items-end tablet:items-end mobile:items-start mobile:space-y-6 justify-between">
+                <div
+                    class="flex desktop:flex-row tablet:flex-row mobile:flex-col desktop:items-end tablet:items-end mobile:items-start mobile:space-y-6 justify-between">
                     <div class="desktop:w-[553px] tablet:w-[553px] mobile:w-auto space-y-6">
-                        <label href="" class="py-3 px-5 text-[16px] border rounded-full w-auto border-paragraph">Premium Course</label>
+                        <label href="" class="py-3 px-5 text-[16px] border rounded-full w-auto border-paragraph">Premium
+                            Course</label>
                         <h2>Our Course</h2>
                         <p>Explore our wide range of premium products,
                             crafted to meet the highest standards.
                             From stylish shoes to trendy accessories.</p>
                     </div>
 
-                    <a href="" class="btn bg-baseColor border-0 text-blackTheme flex flex-row items-center hover:scale-110 ease-in duration-200"> View All Course
+                    <a href=""
+                        class="btn bg-baseColor border-0 text-blackTheme flex flex-row items-center hover:scale-110 ease-in duration-200">
+                        View All Course
                         <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </a>
                 </div>
@@ -333,8 +361,10 @@
                     <div class="flex flex-row space-x-6">
                         <div class="dropdown border-b-2 w-48 flex flex-row justify-between cursor-pointer relative">
                             All Categories
-                            <img class="icon transition-transform duration-200" src="./src/assets/svg/north-east-arrow.svg" alt="">
-                            <div class="dropdown-content absolute overflow-y-auto h-32 top-full left-0 w-full bg-white border border-gray-300 mt-6 rounded-lg shadow-md z-10 hidden">
+                            <img class="icon transition-transform duration-200"
+                                src="./src/assets/svg/north-east-arrow.svg" alt="">
+                            <div
+                                class="dropdown-content absolute overflow-y-auto h-32 top-full left-0 w-full bg-white border border-gray-300 mt-6 rounded-lg shadow-md z-10 hidden">
                                 <ul class="text-gray-700 flex flex-col">
                                     <a href="" class="p-2 hover:bg-gray-100">Category 1</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 2</a>
@@ -342,11 +372,13 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="dropdown border-b-2 w-48 flex flex-row justify-between cursor-pointer relative">
                             Popular Course
-                            <img class="icon transition-transform duration-200" src="./src/assets/svg/north-east-arrow.svg" alt="">
-                            <div class="dropdown-content overflow-y-auto h-32 absolute top-full left-0 w-full bg-white border border-gray-300 mt-6 rounded-lg shadow-md z-10 hidden">
+                            <img class="icon transition-transform duration-200"
+                                src="./src/assets/svg/north-east-arrow.svg" alt="">
+                            <div
+                                class="dropdown-content overflow-y-auto h-32 absolute top-full left-0 w-full bg-white border border-gray-300 mt-6 rounded-lg shadow-md z-10 hidden">
                                 <ul class="text-gray-700 flex flex-col">
                                     <a href="" class="p-2 hover:bg-gray-100">Category 1</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 2</a>
@@ -356,21 +388,23 @@
                                     <a href="" class="p-2 hover:bg-gray-100">Category 3</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 1</a>
                                     <a href="" class="p-2 hover:bg-gray-100">Category 2</a>
-                                    <a href="" class="p-2 hover:bg-gray-100">Category 3</a>                                    
+                                    <a href="" class="p-2 hover:bg-gray-100">Category 3</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
+
                     <input placeholder="Search Course......" name="search" class="search-fill relative">
-                        <!-- <img class="h-4 w-4" src="./src/assets/svg/magnifying-glass.svg" alt=""> -->
+                    <!-- <img class="h-4 w-4" src="./src/assets/svg/magnifying-glass.svg" alt=""> -->
                     </input>
                 </div>
 
                 <div class="mt-10">
                     <div class="desktop:grid tablet:grid grid-cols-3 grid-rows-2 gap-6 mobile:flex flex-col">
                         <div class="flex flex-col space-y-6">
-                            <a class="hover:scale-105 ease-in duration-200" href=""><div class="card-square bg-book bg-cover bg-center"></div></a>
+                            <a class="hover:scale-105 ease-in duration-200" href="">
+                                <div class="card-square bg-book bg-cover bg-center"></div>
+                            </a>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
@@ -398,7 +432,9 @@
                             </div>
                         </div>
                         <div class="flex flex-col space-y-6">
-                            <a class="hover:scale-105 ease-in duration-200" href=""><div class="card-square bg-cover bg-center bg-imgSquare3"></div></a>
+                            <a class="hover:scale-105 ease-in duration-200" href="">
+                                <div class="card-square bg-cover bg-center bg-imgSquare3"></div>
+                            </a>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
@@ -427,7 +463,9 @@
                         </div>
 
                         <div class="flex flex-col space-y-6">
-                            <a id="course-card" class="hover:scale-105 ease-in duration-200" href=""><div class="card-square bg-imgSquare4 bg-cover bg-center"></div></a>
+                            <a id="course-card" class="hover:scale-105 ease-in duration-200" href="">
+                                <div class="card-square bg-imgSquare4 bg-cover bg-center"></div>
+                            </a>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
@@ -457,7 +495,9 @@
                         </div>
 
                         <div class="flex flex-col space-y-6">
-                            <a class="hover:scale-105 ease-in duration-200" href=""><div class="card-square bg-imgSquare1 bg-cover bg-center"></div></a>
+                            <a class="hover:scale-105 ease-in duration-200" href="">
+                                <div class="card-square bg-imgSquare1 bg-cover bg-center"></div>
+                            </a>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
@@ -486,7 +526,9 @@
                             </div>
                         </div>
                         <div class="flex flex-col space-y-6">
-                            <a class="hover:scale-105 ease-in duration-200" href=""><div class="card-square bg-imgSquare4 bg-cover bg-center"></div></a>
+                            <a class="hover:scale-105 ease-in duration-200" href="">
+                                <div class="card-square bg-imgSquare4 bg-cover bg-center"></div>
+                            </a>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
@@ -516,7 +558,9 @@
                         </div>
 
                         <div class="flex flex-col space-y-6">
-                            <a class="hover:scale-105 ease-in duration-200" href=""><div class="card-square bg-imgSquare2 bg-cover bg-center"></div></a>
+                            <a class="hover:scale-105 ease-in duration-200" href="">
+                                <div class="card-square bg-imgSquare2 bg-cover bg-center"></div>
+                            </a>
                             <div class="flex flex-col desktop:space-y-4 tablet:space-y-2 mobile:space-y-4 mt-6">
                                 <div class="flex flex-row justify-between w-auto">
                                     <div class="flex flex-row space-x-2 items-center">
@@ -568,7 +612,8 @@
         <div class="desktop:mt-10 tablet:mt-10 mobile:mt-6">
             <div class="desktop:grid tablet:grid grid-cols-3 grid-rows-2 gap-6 mobile:flex">
                 <div class="card-testimonial bg-cardTestimonial">
-                    <div class=" flex flex-col desktop:justify-between tablet:justify-between mobile:space-y-4 desktop:w-full desktop:h-full tablet:w-full tablet:h-full mobile:w-full mobile:h-auto">
+                    <div
+                        class=" flex flex-col desktop:justify-between tablet:justify-between mobile:space-y-4 desktop:w-full desktop:h-full tablet:w-full tablet:h-full mobile:w-full mobile:h-auto">
                         <div class="flex flex-row space-x-1">
                             <img class="star" src="./src/assets/svg/Star.svg" alt="">
                             <img class="star" src="./src/assets/svg/Star.svg" alt="">
@@ -720,7 +765,8 @@
                     <img src="./src/assets/svg/macademy_logo.svg" alt="">
                 </div>
                 <div class="flex flex-row space-x-2">
-                    <a href="" class="btn bg-baseColor border-0 text-blackThemeTheme hover:scale-105 ease-in duration-200">
+                    <a href=""
+                        class="btn bg-baseColor border-0 text-blackThemeTheme hover:scale-105 ease-in duration-200">
                         View All Source
                         <img class="icon" src="./src/assets/svg/north-east-arrow.svg" alt="">
                     </a>
@@ -751,27 +797,41 @@
                 <div class="flex-col">
                     <h4>Company</h4>
                     <div class="flex flex-col mt-6 space-y-3">
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">About Us</a>
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Student Testimonial</a>
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Course</a>
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Contact</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">About
+                            Us</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Student
+                            Testimonial</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Course</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Contact</a>
                     </div>
                 </div>
 
                 <div class="flex-col">
                     <h4>User</h4>
                     <div class="flex flex-col mt-6 space-y-3">
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Be a Mentor</a>
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Be a Student</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Be a
+                            Mentor</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Be a
+                            Student</a>
                     </div>
                 </div>
 
                 <div class="flex-col">
                     <h4>Support</h4>
                     <div class="flex flex-col mt-6 space-y-3">
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Help Center</a>
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">FAQ</a>
-                        <a href="" class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Forums</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Help
+                            Center</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">FAQ</a>
+                        <a href=""
+                            class="font-inter text-[18px] text-[#898D94] hover:text-[#111111] ease-in duration-200">Forums</a>
                     </div>
                 </div>
             </div>
@@ -779,7 +839,8 @@
 
         <div class="border-t-2 my-6"></div>
 
-        <div class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between mobile:space-y-6 mobile:items-center">
+        <div
+            class="flex desktop:flex-row tablet:flex-row mobile:flex-col justify-between mobile:space-y-6 mobile:items-center">
             <h4 class="font-helvetica mobile:text-[16px]">© 2024 macademy. All rights reserved.</h4>
             <div class="flex flex-row space-x-6 ">
                 <h4 class="mobile:text-[16px]">Customer Services</h4>

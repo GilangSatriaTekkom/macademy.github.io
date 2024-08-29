@@ -8,41 +8,12 @@
 
 @layer base {
 
-/* Animasi scale */
-@keyframes scaleDown {
-    0% {
-        transform: scale(1.05); /* Mulai dari ukuran 1.5x lebih besar */
-        opacity: 0;            /* Mulai dengan opacity 0 */
-    }
-    100% {
-        transform: scale(1);   /* Berakhir dengan ukuran normal */
-        opacity: 1;            /* Berakhir dengan opacity 1 */
-    }
-}
-
-@keyframes padeUp {
-    0% {
-        transform: translateY(100px); /* Mulai dari ukuran 1.5x lebih besar */
-        opacity: 0;            /* Mulai dengan opacity 0 */
-    }
-    100% {
-        transform: translateY(0);   /* Berakhir dengan ukuran normal */
-        opacity: 1;            /* Berakhir dengan opacity 1 */
-    }
-}
-
-/* Ketika elemen terlihat, jalankan animasi */
-section.show h2 {
-    animation: scaleDown 0.5s forwards ease-in-out;
-}
-
-section h2 {
+section {
     opacity: 0;
-    transform: scale(1.5); /* Set initial state to match the animation */
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-section.show {
+    transition: opacity 0.5s ease-out;
+  }
+  
+section.visible {
     opacity: 1;
 }
 
@@ -52,7 +23,7 @@ p {
 
 
 h1 {
-    @apply text-[138px] text-center font-inter 
+    @apply text-[138px] text-center font-inter opacity-0 translate-y-10 ease-in duration-200
 }
 
 li {
@@ -178,7 +149,7 @@ header {
 }
 
 .btn {
-    @apply py-3 px-5 text-[16px] border rounded-full flex flex-row items-center justify-center border-blackTheme space-x-2 
+    @apply py-3 px-5 text-[16px] border rounded-full flex flex-row items-center justify-center border-blackTheme space-x-2 transition-transform duration-200 animate-scaleUp animate-fadeIn 
 }
 
 .btn-circle {
@@ -500,6 +471,29 @@ header {
     }
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.scaleUp {
+    animation: scaleUp 1s ease-in-out 51000ms; /* Menambahkan delay 50ms */
+}
+
+.bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out; /* Membuat transisi fade */
+  }
 
     
 @media (screen(tablet)) {

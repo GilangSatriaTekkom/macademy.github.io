@@ -915,54 +915,12 @@ input:checked + .toggle-bg {
   border-color: #1C64F2;
 }
 
-/* Animasi scale */
-
-@keyframes scaleDown {
-  0% {
-    transform: scale(1.05);
-    /* Mulai dari ukuran 1.5x lebih besar */
-    opacity: 0;
-    /* Mulai dengan opacity 0 */
-  }
-
-  100% {
-    transform: scale(1);
-    /* Berakhir dengan ukuran normal */
-    opacity: 1;
-    /* Berakhir dengan opacity 1 */
-  }
-}
-
-@keyframes padeUp {
-  0% {
-    transform: translateY(100px);
-    /* Mulai dari ukuran 1.5x lebih besar */
-    opacity: 0;
-    /* Mulai dengan opacity 0 */
-  }
-
-  100% {
-    transform: translateY(0);
-    /* Berakhir dengan ukuran normal */
-    opacity: 1;
-    /* Berakhir dengan opacity 1 */
-  }
-}
-
-/* Ketika elemen terlihat, jalankan animasi */
-
-section.show h2 {
-  animation: scaleDown 0.5s forwards ease-in-out;
-}
-
-section h2 {
+section {
   opacity: 0;
-  transform: scale(1.5);
-  /* Set initial state to match the animation */
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: opacity 0.5s ease-out;
 }
 
-section.show {
+section.visible {
   opacity: 1;
 }
 
@@ -971,9 +929,14 @@ p {
 }
 
 h1 {
+  --tw-translate-y: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   text-align: center;
   font-family: Inter, sans-serif;
   font-size: 138px;
+  opacity: 0;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 li {
@@ -1282,6 +1245,34 @@ header {
 
 .btn {
   display: flex;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn {
+  animation: scaleUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn {
+  animation: fadeIn 1s ease-out;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -1303,6 +1294,9 @@ header {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   font-size: 16px;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
 .btn-circle {
@@ -1780,6 +1774,26 @@ header {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -2885,10 +2899,6 @@ header {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-x-auto {
-  overflow-x: auto;
 }
 
 .overflow-y-auto {

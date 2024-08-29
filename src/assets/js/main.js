@@ -1,4 +1,5 @@
 let elements = document.getElementsByTagName("header");
+
 if (elements.length > 0) {
     for (let i = 0; i < elements.length; i++) {
         let element = elements[i];
@@ -116,38 +117,7 @@ document.getElementById('hamburger').addEventListener('click', function() {
     });
 });
 
-document.querySelectorAll('.p-testimonial').forEach((element, index) => {
-    const delay = 10 * index; // Jeda 10ms per elemen
-    element.style.animationDelay = `${delay}ms`;
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Fungsi untuk meng-handle perubahan visibility section
-    const callback = function (entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show'); // Tambah kelas 'show' jika elemen terlihat
-
-                // Hentikan observer untuk elemen ini karena animasi hanya perlu terjadi sekali
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-
-    // Atur options untuk observer (threshold 0.1 berarti 10% dari section harus terlihat)
-    const options = {
-        threshold: 0.1
-    };
-
-    // Buat observer
-    const observer = new IntersectionObserver(callback, options);
-
-    // Mengambil semua elemen section dan mengamati mereka
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-});
+  
 
 
 // Animasi paragrapgh testimonial
@@ -156,18 +126,83 @@ document.querySelectorAll('.p-testimonial').forEach((element, index) => {
     element.style.animationDelay = `${delay}ms`;
 });
 
-function CardbgSwitch () {
-    const courseCard = document.getElementById('course-card');
-    courseCard.style.backgroundimage = image[index];
-    currentIndex = (currentIndex + 1) % keys.length;
 
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('section');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: [0.1]  // 10% dari elemen terlihat
+    });
+  
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+
+// _____________RANDOM CHANGE BG________________
+// Menyimpan original class dari masing-masing elemen
+const originalClasses = {
+  bgCard1: 'bg-book',
+  bgCard2: 'bg-img1',
+  bgCard3: 'bg-img2',
+};
+
+let intervalId;
+
+// Fungsi untuk memulai perubahan class secara acak saat hover
+function startRandomChange(elementId) {
+  const div = document.getElementById(elementId);
+  const imgClasses = ['bg-img1', 'bg-img2', 'bg-img3', 'bg-img4', 'bg-book'];
+
+  // Menyimpan class awal sebelum diubah
+  const originalClass = originalClasses[elementId];
+
+  // Mulai interval untuk mengubah class secara acak setiap 3000ms (3 detik)
+  intervalId = setInterval(() => {
+    // Hapus semua class img dari div
+    imgClasses.forEach(cls => div.classList.remove(cls));
+
+    // Pilih class secara acak
+    const randomClass = imgClasses[Math.floor(Math.random() * imgClasses.length)];
+    div.classList.add(randomClass);
+  }, 3000); // Delay 3000ms (3 detik)
+
+  // Fungsi untuk menghentikan perubahan dan mengembalikan class ke yang semula
+  function stopRandomChange() {
+    clearInterval(intervalId);
+
+    // Hapus semua class img dari div
+    imgClasses.forEach(cls => div.classList.remove(cls));
+
+    // Tambahkan kembali class awal
+    div.classList.add(originalClass);
+  }
+
+  // Event listener untuk mouse leave
+  div.addEventListener('mouseleave', stopRandomChange, { once: true });
 }
+
+// Menambahkan event listener hover ke setiap elemen
+document.getElementById('bgCard1').addEventListener('mouseenter', () => startRandomChange('bgCard1'));
+document.getElementById('bgCard2').addEventListener('mouseenter', () => startRandomChange('bgCard2'));
+document.getElementById('bgCard3').addEventListener('mouseenter', () => startRandomChange('bgCard3'));
+
+
+// _____________RANDOM CHANGE BG________________
+
 
 
 // Window onbeforeunload harus selalu paling bawah
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-//     h1Animation ();
-//   }
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 
 
